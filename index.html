@@ -229,6 +229,49 @@
                     <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>
+
+            <!-- Vendor Partnership Card -->
+            <div class="vendor-partnership-card">
+                <div class="vendor-content">
+                    <span class="category-tag">PARTNERSHIP OPPORTUNITY</span>
+                    <div class="vendor-heading-wrap">
+                        <div class="side-accent"></div>
+                        <h2>JOIN OUR VENDOR NETWORK</h2>
+                    </div>
+                    <div class="dotted-divider"></div>
+                    <h3>Consent to Contact</h3>
+                    <p>By submitting this form, you agree to be contacted by <strong>Klemton Contracting
+                            Services</strong>
+                        via phone call, text message, or email regarding potential vendor opportunities, work orders,
+                        or business collaborations.</p>
+                    <p class="opt-out">You may opt out of receiving messages from us at any time by replying “STOP” or
+                        by contacting us directly.</p>
+                    <p class="team-phone">Vendor recruiting team: <strong>(279) 277-4445</strong></p>
+                </div>
+                <div class="vendor-form-wrap">
+                    <form class="vendor-form"
+                        onsubmit="event.preventDefault(); alert('Vendor application submitted!');">
+                        <div class="vendor-form-group">
+                            <label for="vendor-name">Your name</label>
+                            <input type="text" id="vendor-name" placeholder="" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-email">Your email</label>
+                            <input type="email" id="vendor-email" placeholder="" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-phone">Phone</label>
+                            <input type="tel" id="vendor-phone" placeholder="" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-message">Your message (optional)</label>
+                            <textarea id="vendor-message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-vendor-submit">Agree & Submit</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </section>
 
