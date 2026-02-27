@@ -1,17 +1,25 @@
 :root {
-    /* Colors */
-    --primary-color: #D45D35; /* Logo Rust/Orange */
-    --primary-hover: #b84a25;
-    --secondary-color: #1B3B5F; /* Logo Dark Blue */
-    --secondary-hover: #142a45;
-    --accent-color: #F2F4F8; /* Light Gray/Blue background */
-    --text-dark: #333333;
-    --text-light: #666666;
+    /* Colors - Inspired by the Logo */
+    --primary-color: #FFD700;
+    /* Vibrant Logo Yellow */
+    --secondary-color: #0077C2;
+    /* Logo Blue */
+    --accent-color: #E44D26;
+    /* Logo Orange/Red */
+
+    --bg-dark: #0F172A;
+    /* Deep Navy for contrast */
+    --bg-light: #F8FAFC;
     --white: #ffffff;
-    --border-color: #e0e0e0;
-    
+
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --text-on-primary: #1E293B;
+
+    --border-color: #E2E8F0;
+
     /* Typography */
-    --font-heading: 'Roboto Slab', serif;
+    --font-heading: 'Outfit', 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
 
     /* Spacing */
@@ -21,12 +29,19 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+    /* Shadows & Effects */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+
+    /* Corner Radius */
+    --radius-sm: 4px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
 
     /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
