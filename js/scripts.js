@@ -24,30 +24,36 @@ mobileMenuBtn.addEventListener('click', () => {
     }
 });
 
-// Smooth Scroll for Anchor Links (polfill-like behavior for older browsers, though CSS handles most)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        const url = new URL(this.href, window.location.origin);
+        
+        // If the path is the same (or we are on / and path is index.html), handle smooth scroll
+        const isSamePath = url.pathname === window.location.pathname || 
+                          (url.pathname.endsWith('index.html') && window.location.pathname.endsWith('/')) ||
+                          (url.pathname.endsWith('/') && window.location.pathname.endsWith('index.html'));
 
-        // Close mobile menu if open
-        if (window.innerWidth <= 768 && navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        }
+        if (isSamePath && url.hash) {
+            e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+            // Close mobile menu if open
+            if (window.innerWidth <= 768 && navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            }
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            // Account for fixed header
-            const headerOffset = 80;
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            const targetElement = document.querySelector(url.hash);
+            if (targetElement) {
+                // Account for fixed header
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
         }
     });
 });

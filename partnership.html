@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Partnership | Taskwave Property Pros</title>
+    <meta name="description"
+        content="Join the Taskwave Property Pros vendor network. We're looking for professional contractors and handymen to partner with us.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Small adjustment for the card on a dedicated page */
+        .partnership-section {
+            padding-bottom: var(--spacing-xl);
+            background-color: var(--bg-light);
+        }
+
+        .partnership-section .vendor-partnership-card {
+            margin-top: -80px;
+            /* Overlap slightly with hero for dynamic look */
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .partnership-section .vendor-partnership-card {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/TASKWAVE_last.png" alt="Taskwave Property Pros" class="logo-img">
+                <span class="logo-text">TASKWAVE</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About Us</a>
+                <a href="partnership.html" class="active">Vendors</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="index.html#contact" class="btn btn-yellow">Get a Quote</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-secondary">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="category-tag" style="color: var(--accent-color);">WORK WITH US</span>
+            <h1>Partner with Taskwave</h1>
+            <p>Grow your business by joining our elite network of property preservation professionals. We handle the
+                admin, you handle the craft.</p>
+        </div>
+    </header>
+
+    <!-- Partnership Form Section -->
+    <section class="partnership-section">
+        <div class="container">
+            <!-- Vendor Partnership Card -->
+            <div class="vendor-partnership-card">
+                <div class="vendor-content">
+                    <span class="category-tag">PARTNERSHIP OPPORTUNITY</span>
+                    <div class="vendor-heading-wrap">
+                        <div class="side-accent"></div>
+                        <h2>JOIN OUR VENDOR NETWORK</h2>
+                    </div>
+                    <div class="dotted-divider"></div>
+                    <h3>Consent to Contact</h3>
+                    <p>By submitting this form, you agree to be contacted by <strong>Taskwave Property Pros</strong>
+                        via phone call, text message, or email regarding potential vendor opportunities, work orders,
+                        or business collaborations.</p>
+                    <p class="opt-out">You may opt out of receiving messages from us at any time by replying “STOP” or
+                        by contacting us directly.</p>
+                    <div class="team-phone">
+                        <p><strong>Questions?</strong> Call our vendor team at <br>(555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="vendor-form-wrap">
+                    <form class="vendor-form"
+                        onsubmit="event.preventDefault(); alert('Vendor application submitted!');">
+                        <div class="vendor-form-group">
+                            <label for="vendor-name">Your name</label>
+                            <input type="text" id="vendor-name" placeholder="Full Name" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-email">Your email</label>
+                            <input type="email" id="vendor-email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-phone">Phone number</label>
+                            <input type="tel" id="vendor-phone" placeholder="(555) 000-0000" required>
+                        </div>
+                        <div class="vendor-form-group">
+                            <label for="vendor-message">Tell us about your services (Trade, Area, Equipment)</label>
+                            <textarea id="vendor-message" rows="4"
+                                placeholder="Example: Licensed electrician serving the metro area..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-vendor-submit">Agree & Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>TASKWAVE</h3>
+                <p>Your trusted partner for property preservation and maintenance excellence.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="partnership.html">Vendors</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Taskwave Property Pros. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
