@@ -340,6 +340,7 @@ img {
 /* About Section */
 .about-section {
     background-color: var(--bg-light);
+    padding-top: 0rem;
 }
 
 .about-container {

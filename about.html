@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Taskwave Property Pros</title>
+    <meta name="description"
+        content="Learn about Taskwave Property Pros - a results-driven Florida property preservation and maintenance company built on performance, reliability, and accountability.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* About Page Styles */
+        .about-intro-section {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-light);
+        }
+
+        .about-intro-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            padding: 3rem;
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .about-intro-card .category-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-intro-card h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .about-intro-card p {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+
+        .why-choose-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .why-choose-header .category-tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-choose-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .why-choose-header p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .why-choose-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .why-choose-intro p {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            transition: var(--transition-normal);
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.4rem;
+            color: var(--text-on-primary);
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* Mission & Vision Section */
+        .mission-vision-section {
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a2744 100%);
+            color: var(--white);
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .mv-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+        }
+
+        .mv-card .mv-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 215, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .mv-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .mv-card p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* CTA Section */
+        .about-cta-section {
+            padding: var(--spacing-lg) 0;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .about-cta-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+
+        .about-cta-section p {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-intro-card {
+                margin-top: 0;
+                padding: 2rem 1.5rem;
+            }
+
+            .about-intro-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose-header h2 {
+                font-size: 1.6rem;
+            }
+
+            .mv-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-cta-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/TASKWAVE_last.png" alt="Taskwave Property Pros" class="logo-img">
+                <span class="logo-text">TASKWAVE</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#services">Services</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="partnership.html">Vendors</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="index.html#contact" class="btn btn-yellow">Get a Quote</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero hero-secondary">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="category-tag" style="color: var(--accent-color);">WHO WE ARE</span>
+            <h1>About Taskwave Property Pros</h1>
+            <p>Performance, reliability, and accountability. Built to protect and maintain properties across Florida.</p>
+        </div>
+    </header>
+
+    <!-- About Intro Section -->
+    <section class="about-intro-section">
+        <div class="container">
+            <div class="about-intro-card">
+                <span class="category-tag">ABOUT US</span>
+                <h2>Results-Driven Property Preservation</h2>
+                <p>Taskwave Property Pros is a results-driven Florida property preservation and Maintenance Company built on performance, reliability, and accountability. We specialize in protecting and maintaining residential and commercial properties with speed, precision, and professionalism.</p>
+                <p>We proudly partner with large national companies and industry-leading organizations that demand high standards and consistent execution. Our team understands Florida's climate challenges, storm exposure, and strict compliance requirements and we deliver solutions that meet those expectations without compromise.</p>
+                <p>From rapid response to detailed documentation, every project we complete reflects our commitment to quality, efficiency, and excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-header">
+                <span class="category-tag">WHY CHOOSE US</span>
+                <h2>Why Choose Taskwave Property Pros</h2>
+                <div class="divider"></div>
+                <p>A Performance-Driven Property Solutions Company</p>
+            </div>
+
+            <div class="why-choose-intro">
+                <p>Taskwave Property Pros is built on one clear mission: deliver reliable, high-standard property preservation and maintenance services across Florida. We proudly partner with major national companies that expect precision, speed, and accountability. Our team operates with strict quality control, fast turnaround times, and detailed documentation on every project.</p>
+                <p style="margin-top: 0.75rem; font-weight: 600; color: var(--text-main);">We don't just complete jobs -- we execute them with structure, discipline, and consistency.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ph ph-lightning"></i>
+                    </div>
+                    <h3>Rapid Response & Execution</h3>
+                    <p>We understand that property timelines matter. Our crews respond quickly and complete projects efficiently without compromising quality.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ph ph-shield-check"></i>
+                    </div>
+                    <h3>High Compliance Standards</h3>
+                    <p>Florida's weather and regulations demand expertise. We follow strict safety, reporting, and service standards on every assignment.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ph ph-flow-arrow"></i>
+                    </div>
+                    <h3>Structured Workflow System</h3>
+                    <p>From work order intake to final photo documentation, our process is organized, transparent, and dependable.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ph ph-users-three"></i>
+                    </div>
+                    <h3>Experienced Field Crews</h3>
+                    <p>Our trained professionals handle securing, maintenance, repairs, and emergency response with confidence and attention to detail.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ph ph-chat-circle-text"></i>
+                    </div>
+                    <h3>Clear Communication</h3>
+                    <p>We maintain consistent updates and detailed reports so our partners always stay informed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="ph ph-target"></i>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <p>At Taskwave Property Pros, our mission is to protect more than properties -- we protect value, stability, and opportunity.</p>
+                    <p style="margin-top: 1rem;">We are committed to delivering dependable, high-quality property preservation and maintenance services that communities and national partners can rely on. Through hard work, integrity, and attention to detail, we strive to make every property safer, stronger, and ready for its next chapter.</p>
+                </div>
+
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <i class="ph ph-eye"></i>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to become a trusted name across Florida -- known not only for the work we do, but for the standards we uphold.</p>
+                    <p style="margin-top: 1rem;">We aim to build lasting partnerships, create meaningful impact in the communities we serve, and set a higher benchmark for excellence in the property preservation industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta-section">
+        <div class="container">
+            <h2>Ready to Work With Us?</h2>
+            <p>Whether you need property services or want to join our vendor network, we're here to help.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Contact Us</a>
+                <a href="partnership.html" class="btn btn-secondary btn-lg">Become a Vendor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>TASKWAVE</h3>
+                <p>Your trusted partner for property preservation and maintenance excellence.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="partnership.html">Vendors</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Taskwave Property Pros. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
