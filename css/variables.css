@@ -1,20 +1,46 @@
 :root {
-    /* Colors - Inspired by the Logo */
-    --primary-color: #FFD700;
-    /* Vibrant Logo Yellow */
-    --secondary-color: #0077C2;
-    /* Logo Blue */
-    --accent-color: #E44D26;
-    /* Logo Orange/Red */
+    /* Primary Brand Colors - Red (TASKWAVE logo text) */
+    --primary-color: #DC143C;
+    /* Crimson Red */
+    --primary-hover: #B01030;
+    /* Darker red for hover */
+    --primary-light: rgba(220, 20, 60, 0.1);
+    /* Light red background */
 
+    /* Secondary Colors - Orange (House from logo) */
+    --secondary-color: #E07020;
+    /* Orange/Rust */
+    --secondary-hover: #C55A10;
+    /* Darker orange for hover */
+    --secondary-light: rgba(224, 112, 32, 0.1);
+    /* Light orange background */
+
+    /* Tertiary Colors - Blue (Tools from logo) */
+    --tertiary-color: #0066B3;
+    /* Blue */
+    --tertiary-hover: #004D85;
+    /* Darker blue for hover */
+    --tertiary-light: rgba(0, 102, 179, 0.1);
+    /* Light blue background */
+
+    /* Accent - Gold (Special highlights only) */
+    --accent-color: #FFD700;
+    /* Gold */
+    --accent-dark: #FFC700;
+    /* Darker gold for hover */
+
+    /* Backgrounds */
     --bg-dark: #0F172A;
     /* Deep Navy for contrast */
     --bg-light: #F8FAFC;
     --white: #ffffff;
 
+    /* Text Colors */
     --text-main: #1E293B;
     --text-muted: #64748B;
-    --text-on-primary: #1E293B;
+    --text-on-primary: #ffffff;
+    /* White on red/orange */
+    --text-on-secondary: #ffffff;
 
     --border-color: #E2E8F0;
 
