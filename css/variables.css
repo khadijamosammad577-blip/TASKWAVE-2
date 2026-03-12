@@ -2,30 +2,33 @@
     /* Primary Brand Colors - Taskwave Orange */
     --primary-color: #F97316;
     --primary-hover: #EA580C;
-    --primary-light: #FFF7ED; /* Clean orange tint */
+    --primary-light: rgba(249, 115, 22, 0.1);
 
-    /* Secondary Colors - Rich Burnt Orange (Harmonous) */
-    /* This replaces the dark color to ensure gradients are clean and professional */
+    /* Secondary Colors - Rich Burnt Orange */
     --secondary-color: #C2410C; 
     --secondary-hover: #9A3412;
-    --secondary-light: #FFFBEB; /* Matches the warm tone */
+    --secondary-light: rgba(194, 65, 12, 0.1);
 
-    /* Tertiary Colors - Logo Blue (Used for balanced accents) */
+    /* Tertiary Colors - Logo Blue */
     --tertiary-color: #1A6FB5;
     --tertiary-hover: #155A94;
     --tertiary-light: rgba(26, 111, 181, 0.05);
 
-    /* Text & Backgrounds - Using soft Slates for a modern feel */
-    --bg-dark: #1E293B;
-    --bg-light: #F8FAFC;
+    /* Permanent Dark Theme */
+    --bg-main: #020617; /* Obsidian Black */
+    --bg-surface: #0F172A; /* Deep Midnight */
+    --bg-secondary: #1E293B;
+    
     --white: #ffffff;
-
-    --text-main: #1E293B; 
-    --text-muted: #64748B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
     --text-on-primary: #ffffff;
-    --text-on-secondary: #ffffff;
-
-    --border-color: #E2E8F0;
+    
+    --border-color: #1E293B;
+    --glass-bg: rgba(15, 23, 42, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    
+    --shadow-color: rgba(0, 0, 0, 0.3);
 
     /* Typography */
     --font-heading: 'Outfit', 'Inter', sans-serif;
@@ -38,20 +41,10 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 
-    /* Modern UI Effects */
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
-    
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(255, 255, 255, 0.1);
-
-    /* Corner Radius */
+    /* UI Effects */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 32px;
 
-    /* Transitions */
-    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -6,21 +6,28 @@ mobileMenuBtn.addEventListener('click', () => {
     // Basic toggle for demo purposes
     if (navLinks.style.display === 'flex') {
         navLinks.style.display = 'none';
-        navLinks.style.flexDirection = 'row';
-        navLinks.style.position = 'static';
-        navLinks.style.backgroundColor = 'transparent';
-        navLinks.style.width = 'auto';
-        navLinks.style.padding = '0';
+        navLinks.style.flexDirection = '';
+        navLinks.style.position = '';
+        navLinks.style.backgroundColor = '';
+        navLinks.style.width = '';
+        navLinks.style.padding = '';
+        navLinks.style.alignItems = '';
+        navLinks.style.gap = '';
+        navLinks.style.boxShadow = '';
+        navLinks.style.borderTop = '';
     } else {
         navLinks.style.display = 'flex';
         navLinks.style.flexDirection = 'column';
+        navLinks.style.alignItems = 'center';
+        navLinks.style.gap = '1.5rem';
         navLinks.style.position = 'absolute';
         navLinks.style.top = '100%';
         navLinks.style.left = '0';
         navLinks.style.width = '100%';
-        navLinks.style.backgroundColor = '#fff';
-        navLinks.style.padding = '1rem';
-        navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+        navLinks.style.backgroundColor = 'var(--bg-surface)';
+        navLinks.style.padding = '2rem 1rem';
+        navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.5)';
+        navLinks.style.borderTop = '1px solid var(--glass-border)';
     }
 });
 
@@ -28,11 +35,11 @@ mobileMenuBtn.addEventListener('click', () => {
 document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const url = new URL(this.href, window.location.origin);
-        
+
         // If the path is the same (or we are on / and path is index.html), handle smooth scroll
-        const isSamePath = url.pathname === window.location.pathname || 
-                          (url.pathname.endsWith('index.html') && window.location.pathname.endsWith('/')) ||
-                          (url.pathname.endsWith('/') && window.location.pathname.endsWith('index.html'));
+        const isSamePath = url.pathname === window.location.pathname ||
+            (url.pathname.endsWith('index.html') && window.location.pathname.endsWith('/')) ||
+            (url.pathname.endsWith('/') && window.location.pathname.endsWith('index.html'));
 
         if (isSamePath && url.hash) {
             e.preventDefault();

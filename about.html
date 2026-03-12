@@ -26,13 +26,13 @@
         /* About Page Styles */
         .about-intro-section {
             padding: var(--spacing-xl) 0;
-            background-color: var(--bg-light);
+            background-color: var(--bg-main);
         }
 
         .about-intro-card {
-            background: var(--white);
+            background: var(--bg-surface);
             border-radius: var(--radius-md);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 40px var(--shadow-color);
             padding: 3rem;
             margin-top: -80px;
             position: relative;
@@ -69,7 +69,7 @@
         /* Why Choose Section */
         .why-choose-section {
             padding: var(--spacing-xl) 0;
-            background-color: var(--white);
+            background-color: var(--bg-main);
         }
 
         .why-choose-header {
@@ -124,10 +124,10 @@
         }
 
         .feature-card {
-            background: var(--bg-light);
+            background: var(--bg-secondary);
             border-radius: var(--radius-md);
             padding: 2rem;
-            transition: var(--transition-normal);
+            transition: var(--transition);
             border: 1px solid var(--border-color);
         }
 
@@ -167,7 +167,7 @@
         /* Mission & Vision Section */
         .mission-vision-section {
             padding: var(--spacing-xl) 0;
-            background: linear-gradient(135deg, var(--bg-dark) 0%, #1a2744 100%);
+            background: linear-gradient(135deg, var(--bg-main) 0%, #0F172A 100%);
             color: var(--white);
         }
 
@@ -227,7 +227,7 @@
         /* CTA Section */
         .about-cta-section {
             padding: var(--spacing-lg) 0;
-            background-color: var(--bg-light);
+            background-color: var(--bg-secondary);
             text-align: center;
         }
 
@@ -295,7 +295,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="images/TASKWAVE_last.png" alt="Taskwave Property Pros" class="logo-img">
+                <img src="images/Taskwave_1.png" alt="Taskwave Property Pros" class="logo-img">
                 <span class="logo-text">TASKWAVE</span>
             </a>
             <div class="nav-links" id="nav-links">
@@ -305,9 +305,11 @@
                 <a href="index.html#contact">Contact</a>
                 <a href="index.html#contact" class="btn btn-accent">Get a Quote</a>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-                <i class="ph ph-list"></i>
-            </button>
+            <div class="nav-actions">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -317,7 +319,8 @@
         <div class="container hero-content">
             <span class="category-tag" style="color: var(--primary-color);">WHO WE ARE</span>
             <h1>About Taskwave Property Pros</h1>
-            <p>Performance, reliability, and accountability. Built to protect and maintain properties across Florida.</p>
+            <p>Performance, reliability, and accountability. Built to protect and maintain properties across Florida.
+            </p>
         </div>
     </header>
 
@@ -327,9 +330,15 @@
             <div class="about-intro-card">
                 <span class="category-tag">ABOUT US</span>
                 <h2>Results-Driven Property Preservation</h2>
-                <p>Taskwave Property Pros is a results-driven Florida property preservation and Maintenance Company built on performance, reliability, and accountability. We specialize in protecting and maintaining residential and commercial properties with speed, precision, and professionalism.</p>
-                <p>We proudly partner with large national companies and industry-leading organizations that demand high standards and consistent execution. Our team understands Florida's climate challenges, storm exposure, and strict compliance requirements and we deliver solutions that meet those expectations without compromise.</p>
-                <p>From rapid response to detailed documentation, every project we complete reflects our commitment to quality, efficiency, and excellence.</p>
+                <p>Taskwave Property Pros is a results-driven Florida property preservation and Maintenance Company
+                    built on performance, reliability, and accountability. We specialize in protecting and maintaining
+                    residential and commercial properties with speed, precision, and professionalism.</p>
+                <p>We proudly partner with large national companies and industry-leading organizations that demand high
+                    standards and consistent execution. Our team understands Florida's climate challenges, storm
+                    exposure, and strict compliance requirements and we deliver solutions that meet those expectations
+                    without compromise.</p>
+                <p>From rapid response to detailed documentation, every project we complete reflects our commitment to
+                    quality, efficiency, and excellence.</p>
             </div>
         </div>
     </section>
@@ -345,8 +354,12 @@
             </div>
 
             <div class="why-choose-intro">
-                <p>Taskwave Property Pros is built on one clear mission: deliver reliable, high-standard property preservation and maintenance services across Florida. We proudly partner with major national companies that expect precision, speed, and accountability. Our team operates with strict quality control, fast turnaround times, and detailed documentation on every project.</p>
-                <p style="margin-top: 0.75rem; font-weight: 600; color: var(--text-main);">We don't just complete jobs -- we execute them with structure, discipline, and consistency.</p>
+                <p>Taskwave Property Pros is built on one clear mission: deliver reliable, high-standard property
+                    preservation and maintenance services across Florida. We proudly partner with major national
+                    companies that expect precision, speed, and accountability. Our team operates with strict quality
+                    control, fast turnaround times, and detailed documentation on every project.</p>
+                <p style="margin-top: 0.75rem; font-weight: 600; color: var(--text-main);">We don't just complete jobs
+                    -- we execute them with structure, discipline, and consistency.</p>
             </div>
 
             <div class="features-grid">
@@ -355,7 +368,8 @@
                         <i class="ph ph-lightning"></i>
                     </div>
                     <h3>Rapid Response & Execution</h3>
-                    <p>We understand that property timelines matter. Our crews respond quickly and complete projects efficiently without compromising quality.</p>
+                    <p>We understand that property timelines matter. Our crews respond quickly and complete projects
+                        efficiently without compromising quality.</p>
                 </div>
 
                 <div class="feature-card">
@@ -363,7 +377,8 @@
                         <i class="ph ph-shield-check"></i>
                     </div>
                     <h3>High Compliance Standards</h3>
-                    <p>Florida's weather and regulations demand expertise. We follow strict safety, reporting, and service standards on every assignment.</p>
+                    <p>Florida's weather and regulations demand expertise. We follow strict safety, reporting, and
+                        service standards on every assignment.</p>
                 </div>
 
                 <div class="feature-card">
@@ -371,7 +386,8 @@
                         <i class="ph ph-flow-arrow"></i>
                     </div>
                     <h3>Structured Workflow System</h3>
-                    <p>From work order intake to final photo documentation, our process is organized, transparent, and dependable.</p>
+                    <p>From work order intake to final photo documentation, our process is organized, transparent, and
+                        dependable.</p>
                 </div>
 
                 <div class="feature-card">
@@ -379,7 +395,8 @@
                         <i class="ph ph-users-three"></i>
                     </div>
                     <h3>Experienced Field Crews</h3>
-                    <p>Our trained professionals handle securing, maintenance, repairs, and emergency response with confidence and attention to detail.</p>
+                    <p>Our trained professionals handle securing, maintenance, repairs, and emergency response with
+                        confidence and attention to detail.</p>
                 </div>
 
                 <div class="feature-card">
@@ -402,8 +419,12 @@
                         <i class="ph ph-target"></i>
                     </div>
                     <h2>Our Mission</h2>
-                    <p>At Taskwave Property Pros, our mission is to protect more than properties -- we protect value, stability, and opportunity.</p>
-                    <p style="margin-top: 1rem;">We are committed to delivering dependable, high-quality property preservation and maintenance services that communities and national partners can rely on. Through hard work, integrity, and attention to detail, we strive to make every property safer, stronger, and ready for its next chapter.</p>
+                    <p>At Taskwave Property Pros, our mission is to protect more than properties -- we protect value,
+                        stability, and opportunity.</p>
+                    <p style="margin-top: 1rem;">We are committed to delivering dependable, high-quality property
+                        preservation and maintenance services that communities and national partners can rely on.
+                        Through hard work, integrity, and attention to detail, we strive to make every property safer,
+                        stronger, and ready for its next chapter.</p>
                 </div>
 
                 <div class="mv-card">
@@ -411,8 +432,11 @@
                         <i class="ph ph-eye"></i>
                     </div>
                     <h2>Our Vision</h2>
-                    <p>Our vision is to become a trusted name across Florida -- known not only for the work we do, but for the standards we uphold.</p>
-                    <p style="margin-top: 1rem;">We aim to build lasting partnerships, create meaningful impact in the communities we serve, and set a higher benchmark for excellence in the property preservation industry.</p>
+                    <p>Our vision is to become a trusted name across Florida -- known not only for the work we do, but
+                        for the standards we uphold.</p>
+                    <p style="margin-top: 1rem;">We aim to build lasting partnerships, create meaningful impact in the
+                        communities we serve, and set a higher benchmark for excellence in the property preservation
+                        industry.</p>
                 </div>
             </div>
         </div>
